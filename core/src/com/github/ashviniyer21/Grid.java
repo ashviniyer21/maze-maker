@@ -212,13 +212,21 @@ public class Grid {
 
     public void interact(char direction){
         if(direction == 'N'){
-            getComponent(player.getX(), player.getY() + 1).interact(player);
+            if(player.getY() != grid.length - 1){
+                getComponent(player.getX(), player.getY() + 1).interact(player);
+            }
         } else if(direction == 'S'){
-            getComponent(player.getX(), player.getY() - 1).interact(player);
+            if(player.getY() != 0){
+                getComponent(player.getX(), player.getY() - 1).interact(player);
+            }
         } else if(direction == 'E'){
-            getComponent(player.getX() - 1, player.getY()).interact(player);
+            if(player.getX() != 0){
+                getComponent(player.getX() - 1, player.getY()).interact(player);
+            }
         } else if(direction == 'W'){
-            getComponent(player.getX() + 1, player.getY()).interact(player);
+            if(player.getX() != grid[0].length-1){
+                getComponent(player.getX() + 1, player.getY()).interact(player);
+            }
         }
     }
 

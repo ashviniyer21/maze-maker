@@ -11,6 +11,7 @@ public class Player extends GridComponent {
     Map<Item, Integer> items;
     private boolean electricity;
     private Color color;
+    private Color lastColor;
     public enum Color {
         Blue, Orange, None;
     }
@@ -20,6 +21,7 @@ public class Player extends GridComponent {
         items = new HashMap<>();
         electricity = false;
         color = Color.None;
+        lastColor = Color.Orange;
     }
 
     public void addItem(Item item){
@@ -44,9 +46,7 @@ public class Player extends GridComponent {
 
     public void setElectricity(boolean electricity){
         this.electricity = electricity;
-        if(electricity){
-            color = Color.Orange;
-        }
+        setColor(lastColor);
     }
 
     public Color getColor(){
@@ -56,6 +56,7 @@ public class Player extends GridComponent {
     public void setColor(Color color){
         if(electricity){
             this.color = color;
+            lastColor = color;
         } else {
             this.color = Color.None;
         }

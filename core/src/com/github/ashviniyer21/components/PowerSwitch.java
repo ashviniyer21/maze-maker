@@ -12,17 +12,15 @@ public class PowerSwitch extends GridComponent {
 
     @Override
     public void interact(Player player) {
-        if(player.hasElectricity()){
-            player.setElectricity(false);
-            setRegion(new TextureRegion(new Texture(Gdx.files.internal("power-off.png"))));
-        } else {
-            player.setElectricity(true);
-            setRegion(new TextureRegion(new Texture(Gdx.files.internal("power-on.png"))));
-        }
+        player.setElectricity(!player.hasElectricity());
     }
 
     @Override
     public void update(Player player) {
-
+        if(player.hasElectricity()){
+            setRegion(new TextureRegion(new Texture(Gdx.files.internal("power-on.png"))));
+        } else {
+            setRegion(new TextureRegion(new Texture(Gdx.files.internal("power-off.png"))));
+        }
     }
 }
