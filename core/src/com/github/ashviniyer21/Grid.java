@@ -16,7 +16,7 @@ import com.github.ashviniyer21.screens.MakeScreen;
 
 public class Grid {
     GridComponent[][] grid;
-    private float[] offset;
+    private final float[] offset;
     private float tempX;
     private float tempY;
     private Player player;
@@ -74,6 +74,17 @@ public class Grid {
     }
 
     public void addToPlayScreen(Stage stage){
+        if(player != null){
+            if(MazeMaker.GRID_WIDTH * (player.getX() + 1) + offset[0] > 900-MazeMaker.GRID_WIDTH){
+                offset[0] -= MazeMaker.GRID_WIDTH;
+            } else if(MazeMaker.GRID_WIDTH * (player.getX() + 1) + offset[0] < MazeMaker.GRID_WIDTH){
+                offset[0] += MazeMaker.GRID_WIDTH;
+            } else if(MazeMaker.GRID_WIDTH * (player.getY() + 1) + offset[1] > 700-MazeMaker.GRID_WIDTH){
+                offset[1] -= MazeMaker.GRID_WIDTH;
+            } else if(MazeMaker.GRID_WIDTH * (player.getY() + 1) + offset[1] < MazeMaker.GRID_WIDTH){
+                offset[1] += MazeMaker.GRID_WIDTH;
+            }
+        }
         for(GridComponent[] gridComponents: grid){
             for(GridComponent gridComponent: gridComponents){
                 stage.addActor(makeImage(gridComponent));
@@ -88,7 +99,7 @@ public class Grid {
         Image image = new Image(component);
         image.setWidth(MazeMaker.GRID_WIDTH);
         image.setHeight(MazeMaker.GRID_WIDTH);
-        image.setPosition((MazeMaker.GRID_WIDTH)*(component.getX()+1), (MazeMaker.GRID_WIDTH)*(component.getY()+1));
+        image.setPosition((MazeMaker.GRID_WIDTH)*(component.getX()+1) + offset[0], (MazeMaker.GRID_WIDTH)*(component.getY()+1) + offset[1]);
         return image;
     }
 
@@ -147,8 +158,8 @@ public class Grid {
         System.out.println(height);
         Grid grid = new Grid(width, height);
 
-        for(int i = 0; i < width; i++){
-            for(int j = 0; j < height; j++){
+        for(int i = 0; i < height; i++){
+            for(int j = 0; j < width; j++){
                 GridComponent component;
                 switch (value.get(j).get(i).toString()){
                     case "Door":
