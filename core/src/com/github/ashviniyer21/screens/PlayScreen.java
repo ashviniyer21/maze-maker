@@ -36,6 +36,15 @@ public class PlayScreen implements Screen {
 
     private void drawUI(){
         stage.clear();
+        TextButton menuButton = new TextButton("Go Back", MazeMaker.skin);
+        menuButton.setPosition(50, 650);
+        menuButton.addListener(new ChangeListener() {
+            @Override
+            public void changed(ChangeEvent event, Actor actor) {
+                mazeMaker.setScreen(new MenuScreen(stage, mazeMaker));
+            }
+        });
+        stage.addActor(menuButton);
         if(grid != null){
             grid.addToPlayScreen(stage);
         }
@@ -122,6 +131,9 @@ public class PlayScreen implements Screen {
             if(Gdx.input.isKeyJustPressed(Input.Keys.SPACE)){
                 grid.interact(direction);
                 grid.update();
+                if(grid.getPlayer().hasWon()){
+                    mazeMaker.setScreen(new WinScreen(stage, mazeMaker));
+                }
             }
         }
     }

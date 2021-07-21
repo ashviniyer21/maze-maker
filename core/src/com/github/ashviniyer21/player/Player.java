@@ -15,6 +15,7 @@ public class Player extends GridComponent {
     private boolean electricity;
     private Color color;
     private Color lastColor;
+    private boolean won;
     public enum Color {
         Blue, Orange, None;
     }
@@ -25,6 +26,15 @@ public class Player extends GridComponent {
         electricity = false;
         color = Color.None;
         lastColor = Color.Orange;
+        won = false;
+    }
+
+    public void won(){
+        won = true;
+    }
+
+    public boolean hasWon(){
+        return won;
     }
 
     public void addItem(Item item){

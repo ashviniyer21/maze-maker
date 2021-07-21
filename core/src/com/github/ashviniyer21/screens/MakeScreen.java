@@ -78,19 +78,28 @@ public class MakeScreen implements Screen {
 
     public void drawUI(){
         stage.clear();
+        TextButton menuButton = new TextButton("Go Back", MazeMaker.skin);
+        menuButton.setPosition(50, 600);
+        menuButton.addListener(new ChangeListener() {
+            @Override
+            public void changed(ChangeEvent event, Actor actor) {
+                mazeMaker.setScreen(new MenuScreen(stage, mazeMaker));
+            }
+        });
+        stage.addActor(menuButton);
         grid.addToMakeScreen(stage, this);
         final TextField widthInput = new TextField("w", MazeMaker.skin);
-        widthInput.setPosition(25, 650);
+        widthInput.setPosition(75, 650);
         widthInput.setWidth(30);
         stage.addActor(widthInput);
 
         final TextField heightInput = new TextField("h", MazeMaker.skin);
-        heightInput.setPosition(75, 650);
+        heightInput.setPosition(125, 650);
         heightInput.setWidth(30);
         stage.addActor(heightInput);
 
         TextButton resizeGrid = new TextButton("Resize", MazeMaker.skin);
-        resizeGrid.setPosition(125, 650);
+        resizeGrid.setPosition(175, 650);
         resizeGrid.addListener(new ChangeListener() {
             @Override
             public void changed(ChangeEvent event, Actor actor) {
@@ -106,37 +115,37 @@ public class MakeScreen implements Screen {
         });
         stage.addActor(resizeGrid);
 
-        ImageButton floorButton = makeButton("floor.png", 200, 615, new Floor(0, 0));
+        ImageButton floorButton = makeButton("floor.png", 250, 615, new Floor(0, 0));
         stage.addActor(floorButton);
 
-        ImageButton keyButton = makeButton("key.png", 250, 615, new ItemSquare(Item.key, 0, 0));
+        ImageButton keyButton = makeButton("key.png", 300, 615, new ItemSquare(Item.key, 0, 0));
         stage.addActor(keyButton);
 
-        ImageButton doorButton = makeButton("closed-door.png", 300, 615, new Door(0, 0));
+        ImageButton doorButton = makeButton("closed-door.png", 350, 615, new Door(0, 0));
         stage.addActor(doorButton);
 
-        ImageButton fenceButton = makeButton("electric-fence-disabled.png", 350, 615, new ElectricFence(0, 0));
+        ImageButton fenceButton = makeButton("electric-fence-disabled.png", 400, 615, new ElectricFence(0, 0));
         stage.addActor(fenceButton);
 
-        ImageButton powerButton = makeButton("power-off.png", 400, 615, new PowerSwitch(0, 0));
+        ImageButton powerButton = makeButton("power-off.png", 450, 615, new PowerSwitch(0, 0));
         stage.addActor(powerButton);
 
-        ImageButton switchButton = makeButton("switch-off.png", 450, 615, new Switch(0, 0));
+        ImageButton switchButton = makeButton("switch-off.png", 500, 615, new Switch(0, 0));
         stage.addActor(switchButton);
 
-        ImageButton temporaryFloorButton = makeButton("invisible-floor.png", 500, 615, new TemporaryFloor(Player.Color.Orange, 0, 0));
+        ImageButton temporaryFloorButton = makeButton("invisible-floor.png", 550, 615, new TemporaryFloor(Player.Color.Orange, 0, 0));
         stage.addActor(temporaryFloorButton);
 
-        ImageButton wallButton = makeButton("wall.png", 550, 615, new Wall(0, 0));
+        ImageButton wallButton = makeButton("wall.png", 600, 615, new Wall(0, 0));
         stage.addActor(wallButton);
 
-        ImageButton startButton = makeButton("start.png", 600, 615, new StartSpace(0, 0));
+        ImageButton startButton = makeButton("start.png", 650, 615, new StartSpace(0, 0));
         stage.addActor(startButton);
 
-        ImageButton endButton = makeButton("end.png", 650, 615, new EndSpace(0, 0));
+        ImageButton endButton = makeButton("end.png", 700, 615, new EndSpace(0, 0));
         stage.addActor(endButton);
 
-        ImageButton panButton = makeButton("pan-cursor.png", 700, 615, null, true);
+        ImageButton panButton = makeButton("pan-cursor.png", 750, 615, null, true);
         stage.addActor(panButton);
 
         TextButton saveGrid = new TextButton("Save", MazeMaker.skin);
