@@ -17,7 +17,7 @@ public class Door extends GridComponent{
     public void interact(Player player) {
         if(player.hasElectricity() && closed && player.useItem(Item.key)){
             closed = false;
-            walkable = false;
+            walkable = true;
             setRegion(new TextureRegion(new Texture(Gdx.files.internal("open-door.png"))));
         }
     }

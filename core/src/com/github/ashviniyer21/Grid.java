@@ -11,6 +11,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
 import com.badlogic.gdx.utils.JsonReader;
 import com.badlogic.gdx.utils.JsonValue;
 import com.github.ashviniyer21.components.*;
+import com.github.ashviniyer21.components.items.Item;
 import com.github.ashviniyer21.player.Player;
 import com.github.ashviniyer21.screens.MakeScreen;
 
@@ -164,6 +165,9 @@ public class Grid {
                 switch (value.get(j).get(i).toString()){
                     case "Door":
                         component = new Door(i, j);
+                        break;
+                    case "ItemSquare":
+                        component = new ItemSquare(Item.key, i, j);
                         break;
                     case "ElectricFence":
                         component = new ElectricFence(i, j);
