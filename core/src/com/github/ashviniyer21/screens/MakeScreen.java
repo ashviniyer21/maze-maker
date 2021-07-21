@@ -195,6 +195,10 @@ public class MakeScreen implements Screen {
         return selectedComponent;
     }
 
+    public void resetSelectedComponent(){
+        selectedComponent = null;
+    }
+
     public boolean getPanSelected(){
         return pan;
     }

@@ -124,7 +124,7 @@ public class Grid {
                 if(screen.getPanSelected()){
                     tempX = x;
                     tempY = y;
-                } else {
+                } else if(screen.getSelectedComponent() != null){
                     Pixmap pixmap = new Pixmap(Gdx.files.internal("cursor.png"));
                     Cursor cursor = Gdx.graphics.newCursor(pixmap, 0, 0);
                     Gdx.graphics.setCursor(cursor);
@@ -132,6 +132,7 @@ public class Grid {
                     screen.getSelectedComponent().setX(component.getX());
                     screen.getSelectedComponent().setY(component.getY());
                     addComponent(screen.getSelectedComponent());
+                    screen.resetSelectedComponent();
                     screen.drawUI();
                 }
                 return true;
