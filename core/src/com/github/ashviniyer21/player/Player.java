@@ -1,6 +1,9 @@
 package com.github.ashviniyer21.player;
 
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.github.ashviniyer21.components.GridComponent;
 import com.github.ashviniyer21.components.items.Item;
 
@@ -17,7 +20,7 @@ public class Player extends GridComponent {
     }
 
     public Player(int x, int y){
-        super("pan-cursor.png", true, x, y);
+        super("player-up.png", true, x, y);
         items = new HashMap<>();
         electricity = false;
         color = Color.None;
@@ -75,5 +78,18 @@ public class Player extends GridComponent {
     public void move(int x, int y){
         setX(getX() + x);
         setY(getY() + y);
+    }
+
+    public void setImage(char c){
+        if (c == 'E') {
+            setRegion(new TextureRegion(new Texture(Gdx.files.internal("player-right.png"))));
+        } else if(c == 'S'){
+            setRegion(new TextureRegion(new Texture(Gdx.files.internal("player-down.png"))));
+        } else if(c == 'W'){
+            setRegion(new TextureRegion(new Texture(Gdx.files.internal("player-left.png"))));
+        } else if(c == 'N'){
+            setRegion(new TextureRegion(new Texture(Gdx.files.internal("player-up.png"))));
+        }
+
     }
 }

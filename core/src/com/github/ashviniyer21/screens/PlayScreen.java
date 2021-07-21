@@ -89,6 +89,7 @@ public class PlayScreen implements Screen {
         if(grid != null && grid.getPlayer() != null){
             if(Gdx.input.isKeyJustPressed(Input.Keys.LEFT)){
                 direction = 'E';
+                grid.getPlayer().setImage(direction);
                 if(grid.isWalkable(-1, 0)){
                     grid.getPlayer().move(-1, 0);
                     drawUI();
@@ -96,6 +97,7 @@ public class PlayScreen implements Screen {
             }
             if(Gdx.input.isKeyJustPressed(Input.Keys.RIGHT)){
                 direction = 'W';
+                grid.getPlayer().setImage(direction);
                 if(grid.isWalkable(1, 0)){
                     grid.getPlayer().move(1, 0);
                     drawUI();
@@ -103,6 +105,7 @@ public class PlayScreen implements Screen {
             }
             if(Gdx.input.isKeyJustPressed(Input.Keys.UP)){
                 direction = 'N';
+                grid.getPlayer().setImage(direction);
                 if(grid.isWalkable(0, 1)){
                     grid.getPlayer().move(0, 1);
                     drawUI();
@@ -110,6 +113,7 @@ public class PlayScreen implements Screen {
             }
             if(Gdx.input.isKeyJustPressed(Input.Keys.DOWN)){
                 direction = 'S';
+                grid.getPlayer().setImage(direction);
                 if(grid.isWalkable(0, -1)){
                     grid.getPlayer().move(0, -1);
                     drawUI();
