@@ -14,7 +14,7 @@ Maze Maker is a game made using LibGDX and Java that allows users to create leve
 ### Keys
 ![Key](/core/assets/key.png)
 ### Doors
-![Door](/core/assets/door.png)
+![Door](/core/assets/closed-door.png)
 ### Electric Fences
 ![Electric Fence](/core/assets/electric-fence-enabled.png)
 ### Floor Switches
