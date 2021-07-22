@@ -6,6 +6,7 @@ Maze Maker is a game made using LibGDX and Java that allows users to create leve
 ### Playing Levels
 ## Components
 ### Floors
+![Floor](/core/assets/floor.png)
 ### Walls
 ### Power Switch
 ### Keys
