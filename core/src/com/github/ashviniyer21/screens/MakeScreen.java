@@ -9,6 +9,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.ui.TextField;
@@ -78,6 +79,12 @@ public class MakeScreen implements Screen {
 
     public void drawUI(){
         stage.clear();
+        grid.addToMakeScreen(stage, this);
+        Image cover = new Image(new TextureRegionDrawable(new TextureRegion(new Texture(Gdx.files.internal("cover.png")))));
+        cover.setWidth(900);
+        cover.setHeight(150);
+        cover.setPosition(0, 550);
+        stage.addActor(cover);
         TextButton menuButton = new TextButton("Go Back", MazeMaker.skin);
         menuButton.setPosition(50, 600);
         menuButton.addListener(new ChangeListener() {
@@ -87,7 +94,6 @@ public class MakeScreen implements Screen {
             }
         });
         stage.addActor(menuButton);
-        grid.addToMakeScreen(stage, this);
         final TextField widthInput = new TextField("w", MazeMaker.skin);
         widthInput.setPosition(75, 650);
         widthInput.setWidth(30);
