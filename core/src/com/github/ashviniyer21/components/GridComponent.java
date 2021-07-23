@@ -37,6 +37,8 @@ public abstract class GridComponent extends TextureRegionDrawable {
 
     public abstract void update(Player player);
 
+    public abstract TextureRegionDrawable getMakeScreenTexture();
+
     public boolean isWalkable(){
         return walkable;
     }

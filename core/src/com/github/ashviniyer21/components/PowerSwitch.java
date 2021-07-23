@@ -3,6 +3,7 @@ package com.github.ashviniyer21.components;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 import com.github.ashviniyer21.player.Player;
 
 public class PowerSwitch extends GridComponent {
@@ -22,5 +23,10 @@ public class PowerSwitch extends GridComponent {
         } else {
             setRegion(new TextureRegion(new Texture(Gdx.files.internal("power-off.png"))));
         }
+    }
+
+    @Override
+    public TextureRegionDrawable getMakeScreenTexture() {
+        return new TextureRegionDrawable(new TextureRegion(new Texture(Gdx.files.internal("power-on.png"))));
     }
 }

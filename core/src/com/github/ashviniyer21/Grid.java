@@ -105,7 +105,7 @@ public class Grid {
     }
 
     private ImageButton makeImageButton(final GridComponent component, final MakeScreen screen){
-        final ImageButton image = new ImageButton(component);
+        final ImageButton image = new ImageButton(component.getMakeScreenTexture());
         image.setWidth(MazeMaker.GRID_WIDTH);
         image.setHeight(MazeMaker.GRID_WIDTH);
         image.setPosition((MazeMaker.GRID_WIDTH)*(component.getX()+1) + offset[0], (MazeMaker.GRID_WIDTH)*(component.getY()+1) + offset[1]);
@@ -145,7 +145,15 @@ public class Grid {
         String[][] temp = new String[grid.length][grid[0].length];
         for(int i = 0; i < temp.length; i++){
             for(int j = 0; j < temp[i].length; j++){
-                temp[i][j] = grid[i][j].getClass().getSimpleName();
+                if(grid[i][j] instanceof TemporaryFloor){
+                    if(((TemporaryFloor) grid[i][j]).getColor() == Player.Color.Orange){
+                        temp[i][j] = "Orange";
+                    } else {
+                        temp[i][j] = "Blue";
+                    }
+                } else {
+                    temp[i][j] = grid[i][j].getClass().getSimpleName();
+                }
             }
         }
         return temp;
@@ -179,8 +187,11 @@ public class Grid {
                     case "Switch":
                         component = new Switch(i, j);
                         break;
-                    case "TemporaryFloor":
+                    case "Orange":
                         component = new TemporaryFloor(Player.Color.Orange, i, j);
+                        break;
+                    case "Blue":
+                        component = new TemporaryFloor(Player.Color.Blue, i, j);
                         break;
                     case "Wall":
                         component = new Wall(i, j);

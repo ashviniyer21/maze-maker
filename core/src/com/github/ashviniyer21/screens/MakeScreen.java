@@ -124,28 +124,31 @@ public class MakeScreen implements Screen {
         ImageButton doorButton = makeButton("closed-door.png", 350, 615, new Door(0, 0));
         stage.addActor(doorButton);
 
-        ImageButton fenceButton = makeButton("electric-fence-disabled.png", 400, 615, new ElectricFence(0, 0));
+        ImageButton fenceButton = makeButton("electric-fence-enabled.png", 400, 615, new ElectricFence(0, 0));
         stage.addActor(fenceButton);
 
-        ImageButton powerButton = makeButton("power-off.png", 450, 615, new PowerSwitch(0, 0));
+        ImageButton powerButton = makeButton("power-on.png", 450, 615, new PowerSwitch(0, 0));
         stage.addActor(powerButton);
 
-        ImageButton switchButton = makeButton("switch-off.png", 500, 615, new Switch(0, 0));
+        ImageButton switchButton = makeButton("switch-orange.png", 500, 615, new Switch(0, 0));
         stage.addActor(switchButton);
 
-        ImageButton temporaryFloorButton = makeButton("invisible-floor.png", 550, 615, new TemporaryFloor(Player.Color.Orange, 0, 0));
-        stage.addActor(temporaryFloorButton);
+        ImageButton temporaryOrangeFloorButton = makeButton("orange-floor.png", 550, 615, new TemporaryFloor(Player.Color.Orange, 0, 0));
+        stage.addActor(temporaryOrangeFloorButton);
 
-        ImageButton wallButton = makeButton("wall.png", 600, 615, new Wall(0, 0));
+        ImageButton temporaryBlueFloorButton = makeButton("blue-floor.png", 600, 615, new TemporaryFloor(Player.Color.Blue, 0, 0));
+        stage.addActor(temporaryBlueFloorButton);
+
+        ImageButton wallButton = makeButton("wall.png", 650, 615, new Wall(0, 0));
         stage.addActor(wallButton);
 
-        ImageButton startButton = makeButton("start.png", 650, 615, new StartSpace(0, 0));
+        ImageButton startButton = makeButton("start.png", 700, 615, new StartSpace(0, 0));
         stage.addActor(startButton);
 
-        ImageButton endButton = makeButton("end.png", 700, 615, new EndSpace(0, 0));
+        ImageButton endButton = makeButton("end.png", 750, 615, new EndSpace(0, 0));
         stage.addActor(endButton);
 
-        ImageButton panButton = makeButton("pan-cursor.png", 750, 615, null, true);
+        ImageButton panButton = makeButton("pan-cursor.png", 800, 615, null, true);
         stage.addActor(panButton);
 
         TextButton saveGrid = new TextButton("Save", MazeMaker.skin);

@@ -3,6 +3,7 @@ package com.github.ashviniyer21.components;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 import com.github.ashviniyer21.player.Player;
 
 public class TemporaryFloor extends GridComponent{
@@ -35,5 +36,18 @@ public class TemporaryFloor extends GridComponent{
             }
             tempColor = player.getColor();
         }
+    }
+
+    @Override
+    public TextureRegionDrawable getMakeScreenTexture() {
+        if(this.color == Player.Color.Orange){
+            return new TextureRegionDrawable(new TextureRegion(new Texture(Gdx.files.internal("orange-floor.png"))));
+        } else {
+            return new TextureRegionDrawable(new TextureRegion(new Texture(Gdx.files.internal("blue-floor.png"))));
+        }
+    }
+
+    public Player.Color getColor(){
+        return color;
     }
 }
