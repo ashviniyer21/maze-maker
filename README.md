@@ -1,16 +1,41 @@
 # Maze Maker
 Maze Maker is a game made using LibGDX and Java that allows users to create levels and play through other people's levels. Each level has a start and end point, and the player must solve their way through each level to complete the level.
-## Table of Contents
 ## How to Play
 A player will start on a start space, and their goal is to interact with an end space to complete the level, having to traverse through various puzzles created by other players.
 ### Making Levels
 Each level must have exactly 1 start space and at least 1 end space for a player to interact with. Currently levels do not have to be validated, but that will be implemented in the future.
 
+![Make Screen](/images/make-screen.png)
+
 Components can be dragged from the top bar onto the grid by simply clicking on the component, then clicking where on the grid you want to place it.
 
-The grid can also be resized to whatever dimensions fit your need by entering your new width and height, then pressing `resize`.
+Component Bar
+![Component Bar](/images/placing-component-1.png)
+
+Moving Component
+![Moving Component](/images/placing-component-2.png)
+
+Placed Component
+![Moving Component](/images/placing-component-3.png)
+
+The grid can also be resized to whatever dimensions fit your need by entering your new width and height, then pressing `resize`. The grid starts as 12x12 by default.
+
+Entering new dimensions
+![New Dimensions](/images/resize-1.png)
+
+Resizing the Grid
+![Resizing Grid](/images/resize-2.png)
+
+Updated Grid
+![Updated Grid](/images/resize-3.png)
 
 To save a grid, click the `save` button, then select the path you want to save your file to. It will be saved as a `.mzmk` file, which is a required extension for loading levels to play. **Note:** Levels cannot be saved if they do not have exactly 1 start space and at least 1 end spaces
+
+Saving the Grid
+![Saving Grid](/images/save-1.png)
+
+Finding Path
+![Finding Path](/images/save-2.png)
 
 ### Playing Levels
 To load a level, press the `select` button, select the file to upload, then click the `load` button.
