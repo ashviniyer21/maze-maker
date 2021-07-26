@@ -112,7 +112,7 @@ public class MakeScreen implements Screen {
                 try {
                     int x = Integer.parseInt(widthInput.getText());
                     int y = Integer.parseInt(heightInput.getText());
-                    grid = new Grid(x, y, grid);
+                    grid = new Grid(y, x, grid);
                     drawUI();
                 } catch (NumberFormatException e) {
                     System.out.println("Must have integer values");
