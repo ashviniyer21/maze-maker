@@ -1,5 +1,6 @@
 # Maze Maker
-Maze Maker is a game made using LibGDX and Java that allows users to create levels and play through other people's levels. Each level has a start and end point, and the player must solve their way through each level to complete the level.
+Maze Maker is a game made using LibGDX and Java that allows users to create levels and play through other people's levels. Each level has a start and end point, and the player must solve their way through each level to complete the level. [Newest Release](https://github.com/ashviniyer21/maze-maker/releases)
+
 ## How to Play
 A player will start on a start space, and their goal is to interact with an end space to complete the level, having to traverse through various puzzles created by other players.
 ### Making Levels
