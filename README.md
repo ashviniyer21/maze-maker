@@ -6,10 +6,10 @@ Maze Maker is a game made using LibGDX and Java that allows users to create leve
 ### Playing Levels
 ## Components
 ### Start Space
-![Start Space](/core/assets/start-space.png)
+![Start Space](/core/assets/start.png)
 - Space player is spawned at
 ### End Space
-![End Space](/core/assets/end-space.png)
+![End Space](/core/assets/end.png)
 - Interacting with this space completes the level
 ### Floors
 ![Floor](/core/assets/floor.png)
