@@ -14,8 +14,8 @@ Maze Maker is a game made using LibGDX and Java that allows users to create leve
 ### Floors
 ![Floor](/core/assets/floor.png)
 ### Walls
-- Normal Space that can always be walked through
 ![Wall](/core/assets/wall.png)
+- Normal Space that can always be walked through
 - Can never be walked through
 ### Power Switch
 ![Power Switch](/core/assets/power-off.png) ![Power Switch](/core/assets/power-on.png)
