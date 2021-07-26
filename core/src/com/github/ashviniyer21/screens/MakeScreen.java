@@ -164,18 +164,18 @@ public class MakeScreen implements Screen {
             public void changed(ChangeEvent event, Actor actor) {
                 final Json json = new Json();
                 final String[][] check = grid.convertToJson();
-                boolean hasStart = false;
+                int hasStart = 0;
                 boolean hasEnd = false;
                 for (String[] strings : check) {
                     for (String string : strings) {
                         if (string.equals("StartSpace")) {
-                            hasStart = true;
+                            hasStart++;
                         } else if (string.equals("EndSpace")) {
                             hasEnd = true;
                         }
                     }
                 }
-                if(hasStart && hasEnd){
+                if(hasStart == 1 && hasEnd){
                     new Thread(new Runnable() {
                         @Override
                         public void run() {
