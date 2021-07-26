@@ -10,7 +10,7 @@ Components can be dragged from the top bar onto the grid by simply clicking on t
 
 The grid can also be resized to whatever dimensions fit your need by entering your new width and height, then pressing `resize`.
 
-To save a grid, click the `save` button, then select the path you want to save your file to. It will be saved as a `.mzmk` file, which is a required extension for loading levels to play.
+To save a grid, click the `save` button, then select the path you want to save your file to. It will be saved as a `.mzmk` file, which is a required extension for loading levels to play. **Note:** Levels cannot be saved if they do not have exactly 1 start space and at least 1 end spaces
 
 ### Playing Levels
 To load a level, press the `select` button, select the file to upload, then click the `load` button.
