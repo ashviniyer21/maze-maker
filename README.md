@@ -114,4 +114,5 @@ Beating a level will take you to a win screen, where you can go back to either p
 - Add more components
 - Create a proper player sprite
 - Make Server for people to upload levels to
+- Scaling based on resolution and resizing
 - Please leave other suggestions for improvements!
