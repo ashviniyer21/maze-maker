@@ -18,14 +18,14 @@ public class Player extends GridComponent {
     private Color lastColor;
     private boolean won;
     public enum Color {
-        Blue, Orange, None;
+        Blue, Orange;
     }
 
     public Player(int x, int y){
         super("player-up.png", true, x, y);
         items = new HashMap<>();
         electricity = false;
-        color = Color.None;
+        color = Color.Orange;
         lastColor = Color.Orange;
         won = false;
     }
@@ -71,8 +71,6 @@ public class Player extends GridComponent {
         if(electricity){
             this.color = color;
             lastColor = color;
-        } else {
-            this.color = Color.None;
         }
     }
 

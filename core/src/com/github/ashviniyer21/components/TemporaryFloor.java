@@ -11,8 +11,12 @@ public class TemporaryFloor extends GridComponent{
     private Player.Color tempColor;
     public TemporaryFloor(Player.Color color, int x, int y) {
         super("invisible-floor.png", false, x, y);
+        if(color == Player.Color.Orange){
+            setRegion(new TextureRegion(new Texture(Gdx.files.internal("orange-floor.png"))));
+            walkable = true;
+        }
         this.color = color;
-        tempColor = Player.Color.None;
+        tempColor = Player.Color.Orange;
     }
 
     @Override

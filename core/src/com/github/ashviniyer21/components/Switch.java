@@ -30,10 +30,12 @@ public class Switch extends GridComponent{
     public void update(Player player) {
         if(player.hasElectricity() != prevElectricity){
             if(player.hasElectricity()){
-                player.setColor(Player.Color.Orange);
-                setRegion(new TextureRegion(new Texture(Gdx.files.internal("switch-orange.png"))));
+                if(player.getColor() == Player.Color.Orange){
+                    setRegion(new TextureRegion(new Texture(Gdx.files.internal("switch-orange.png"))));
+                } else {
+                    setRegion(new TextureRegion(new Texture(Gdx.files.internal("switch-blue.png"))));
+                }
             } else {
-                player.setColor(Player.Color.None);
                 setRegion(new TextureRegion(new Texture(Gdx.files.internal("switch-off.png"))));
             }
             prevElectricity = player.hasElectricity();
