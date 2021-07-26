@@ -54,9 +54,18 @@ Finding Path
 ### Playing Levels
 To load a level, press the `select` button, select the file to upload, then click the `load` button.
 
+Selecting File
+![Pan Tool](/images/load-1.png)
+![Pan Tool](/images/load-2.png)
+
+Loading File
+![Pan Tool](/images/load-3.png)
+
 After loading a level, the player will spawn on the start space and can move around using the arrow keys. To interact with an object, press space. The object you interact with will be on the grid space above, below, left, or right of the player, depending which direction they are facing.
+![Pan Tool](/images/playing-level.png)
 
 Beating a level will take you to a win screen, where you can go back to either play another level or make one yourself.
+![Pan Tool](/images/winning.png)
 
 ## Components
 ### Start Space
