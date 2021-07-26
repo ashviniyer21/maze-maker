@@ -13,6 +13,7 @@ Maze Maker is a game made using LibGDX and Java that allows users to create leve
 - Interacting with this space completes the level
 ### Floors
 ![Floor](/core/assets/floor.png)
+- Default space that can always be walked through
 ### Walls
 ![Wall](/core/assets/wall.png)
 - Normal Space that can always be walked through
