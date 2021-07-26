@@ -7,10 +7,8 @@ import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 import com.github.ashviniyer21.player.Player;
 
 public class Switch extends GridComponent{
-    private boolean prevElectricity;
     public Switch(int x, int y) {
         super("switch-off.png", false, x, y);
-        prevElectricity = false;
     }
 
     @Override
@@ -28,17 +26,14 @@ public class Switch extends GridComponent{
 
     @Override
     public void update(Player player) {
-        if(player.hasElectricity() != prevElectricity){
-            if(player.hasElectricity()){
-                if(player.getColor() == Player.Color.Orange){
-                    setRegion(new TextureRegion(new Texture(Gdx.files.internal("switch-orange.png"))));
-                } else {
-                    setRegion(new TextureRegion(new Texture(Gdx.files.internal("switch-blue.png"))));
-                }
+        if(player.hasElectricity()){
+            if(player.getColor() == Player.Color.Orange){
+                setRegion(new TextureRegion(new Texture(Gdx.files.internal("switch-orange.png"))));
             } else {
-                setRegion(new TextureRegion(new Texture(Gdx.files.internal("switch-off.png"))));
+                setRegion(new TextureRegion(new Texture(Gdx.files.internal("switch-blue.png"))));
             }
-            prevElectricity = player.hasElectricity();
+        } else {
+            setRegion(new TextureRegion(new Texture(Gdx.files.internal("switch-off.png"))));
         }
     }
 
