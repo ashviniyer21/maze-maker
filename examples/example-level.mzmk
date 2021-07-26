@@ -1,0 +1,170 @@
+[
+[
+	Floor
+	Wall
+	Wall
+	Wall
+	Wall
+	Wall
+	Floor
+	Floor
+	Floor
+	Floor
+	Floor
+	EndSpace
+]
+[
+	Floor
+	Wall
+	Floor
+	ElectricFence
+	Floor
+	Wall
+	Orange
+	Wall
+	Wall
+	Wall
+	Wall
+	Wall
+]
+[
+	ItemSquare
+	Wall
+	Floor
+	Wall
+	Floor
+	Wall
+	Floor
+	Floor
+	Floor
+	Floor
+	Floor
+	Wall
+]
+[
+	Floor
+	Wall
+	Floor
+	Wall
+	Floor
+	Wall
+	Floor
+	Floor
+	Wall
+	Floor
+	Floor
+	Wall
+]
+[
+	Floor
+	Wall
+	Floor
+	Wall
+	Floor
+	Wall
+	Wall
+	Floor
+	Wall
+	Floor
+	Floor
+	Wall
+]
+[
+	Floor
+	Wall
+	Floor
+	Wall
+	Floor
+	Floor
+	Wall
+	Floor
+	Wall
+	Floor
+	Floor
+	Wall
+]
+[
+	Floor
+	Wall
+	Floor
+	Wall
+	Wall
+	Floor
+	Wall
+	Floor
+	Wall
+	Floor
+	Floor
+	Wall
+]
+[
+	Floor
+	Door
+	Floor
+	Floor
+	Wall
+	Floor
+	Wall
+	Floor
+	Wall
+	Floor
+	Floor
+	Wall
+]
+[
+	Floor
+	Wall
+	Wall
+	Floor
+	Wall
+	Floor
+	Wall
+	Floor
+	Wall
+	Switch
+	Floor
+	Wall
+]
+[
+	Floor
+	Wall
+	Wall
+	Floor
+	Wall
+	Floor
+	Wall
+	Floor
+	Wall
+	Wall
+	Wall
+	Wall
+]
+[
+	Floor
+	PowerSwitch
+	Wall
+	Floor
+	Wall
+	Floor
+	Blue
+	Floor
+	Floor
+	Floor
+	Floor
+	Floor
+]
+[
+	StartSpace
+	Wall
+	Wall
+	Switch
+	Wall
+	Wall
+	Wall
+	Wall
+	Wall
+	Wall
+	Wall
+	PowerSwitch
+]
+]
