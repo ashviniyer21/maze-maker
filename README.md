@@ -29,6 +29,20 @@ Resizing the Grid
 Updated Grid
 ![Updated Grid](/images/resize-3.png)
 
+The Grid can also be panned and moved around, which allows for board sizes bigger than the dimensions of the screen. When playing, the board will center around the player's location.
+
+Selecting Pan Tool
+![Pan Tool](/images/pan-1.png)
+
+Using Pan Tool
+![Pan Tool](/images/pan-2.png)
+
+Moved Board
+![Pan Tool](/images/pan-3.png)
+
+Board Moved above border (can be dragged back down)
+![Pan Tool](/images/pan-4.png)
+
 To save a grid, click the `save` button, then select the path you want to save your file to. It will be saved as a `.mzmk` file, which is a required extension for loading levels to play. **Note:** Levels cannot be saved if they do not have exactly 1 start space and at least 1 end spaces
 
 Saving the Grid
