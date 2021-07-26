@@ -24,7 +24,7 @@ Maze Maker is a game made using LibGDX and Java that allows users to create leve
 ### Keys
 ![Key](/core/assets/key.png)
 - Can be picked up by interacting with a square with a key
-- Square can be walked through after key is picked up
+- Square becomes regular floor once key is picked up
 ### Doors
 ![Door](/core/assets/closed-door.png) ![Door](/core/assets/open-door.png)
 - Door starts as closed (left image) and cannot be walked through
