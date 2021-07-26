@@ -46,4 +46,5 @@ Maze Maker is a game made using LibGDX and Java that allows users to create leve
 - If a floor cannot be walked through currently, it will appear as invisible (left image)
 ## Current Bugs / Future Improvements
 - UI overhaul
+- Add more components
 - Make Server for people to upload levels to
