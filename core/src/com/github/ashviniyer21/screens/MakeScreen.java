@@ -207,6 +207,7 @@ public class MakeScreen implements Screen {
             }
         });
         stage.addActor(saveGrid);
+        MazeMaker.scaleStage(stage);
     }
 
     public GridComponent getSelectedComponent(){

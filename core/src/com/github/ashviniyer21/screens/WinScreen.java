@@ -32,6 +32,7 @@ public class WinScreen implements Screen {
             }
         });
         stage.addActor(menuButton);
+        MazeMaker.scaleStage(stage);
     }
 
     @Override

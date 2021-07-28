@@ -47,6 +47,7 @@ public class MenuScreen implements Screen {
 
         stage.addActor(setMakeScreenButton);
         stage.addActor(setPlayScreenButton);
+        MazeMaker.scaleStage(stage);
     }
 
     @Override

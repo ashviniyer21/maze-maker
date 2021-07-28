@@ -91,6 +91,7 @@ public class PlayScreen implements Screen {
         });
         stage.addActor(selectButton);
         stage.addActor(loadButton);
+        MazeMaker.scaleStage(stage);
     }
 
     @Override
