@@ -15,12 +15,14 @@ public class Door extends GridComponent{
     }
 
     @Override
-    public void interact(Player player) {
+    public boolean interact(Player player) {
         if(player.hasElectricity() && closed && player.useItem(Item.key)){
             closed = false;
             walkable = true;
             setRegion(new TextureRegion(new Texture(Gdx.files.internal("open-door.png"))));
+            return true;
         }
+        return false;
     }
 
     @Override

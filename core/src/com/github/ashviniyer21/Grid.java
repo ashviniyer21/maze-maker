@@ -74,6 +74,14 @@ public class Grid {
         }
     }
 
+    public int getWidth(){
+        return grid[0].length;
+    }
+
+    public int getHeight(){
+        return grid.length;
+    }
+
     public void addToPlayScreen(Stage stage){
         if(player != null){
             if(MazeMaker.GRID_WIDTH * (player.getX() + 1) + offset[0] > 900-MazeMaker.GRID_WIDTH){

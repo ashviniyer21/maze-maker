@@ -17,13 +17,15 @@ public class ItemSquare extends GridComponent{
     }
 
     @Override
-    public void interact(Player player) {
+    public boolean interact(Player player) {
         if(hasItem){
             hasItem = false;
             player.addItem(item);
             walkable = true;
             setRegion(new TextureRegion(new Texture(Gdx.files.internal("floor.png"))));
+            return true;
         }
+        return false;
     }
 
     @Override
@@ -34,5 +36,15 @@ public class ItemSquare extends GridComponent{
     @Override
     public TextureRegionDrawable getMakeScreenTexture() {
         return new TextureRegionDrawable(new TextureRegion(new Texture(Gdx.files.internal(item.toString() + ".png"))));
+    }
+
+    public boolean hasItem(){
+        return hasItem;
+    }
+
+    public void undoItem(Player player){
+        hasItem = true;
+        walkable = false;
+        player.useItem(item);
     }
 }

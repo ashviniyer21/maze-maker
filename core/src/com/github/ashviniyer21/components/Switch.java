@@ -12,7 +12,7 @@ public class Switch extends GridComponent{
     }
 
     @Override
-    public void interact(Player player) {
+    public boolean interact(Player player) {
         if(player.hasElectricity()){
             if(player.getColor() == Player.Color.Orange){
                 player.setColor(Player.Color.Blue);
@@ -21,7 +21,9 @@ public class Switch extends GridComponent{
                 player.setColor(Player.Color.Orange);
                 setRegion(new TextureRegion(new Texture(Gdx.files.internal("switch-orange.png"))));
             }
+            return true;
         }
+        return false;
     }
 
     @Override

@@ -33,7 +33,7 @@ public abstract class GridComponent extends TextureRegionDrawable {
         this.y = y;
     }
 
-    public abstract void interact(Player player);
+    public abstract boolean interact(Player player);
 
     public abstract void update(Player player);
 

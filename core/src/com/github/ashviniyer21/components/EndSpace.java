@@ -12,9 +12,9 @@ public class EndSpace extends GridComponent{
     }
 
     @Override
-    public void interact(Player player) {
-        System.out.println("Won");
+    public boolean interact(Player player) {
         player.won();
+        return false;
     }
 
     @Override

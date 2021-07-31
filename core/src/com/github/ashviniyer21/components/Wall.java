@@ -12,8 +12,8 @@ public class Wall extends GridComponent {
     }
 
     @Override
-    public void interact(Player player) {
-
+    public boolean interact(Player player) {
+        return false;
     }
 
     @Override
