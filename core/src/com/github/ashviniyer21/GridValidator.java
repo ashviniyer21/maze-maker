@@ -14,7 +14,7 @@ public class GridValidator {
 
     public static boolean isValid(Grid grid, int x, int y, boolean[][] prev){
         boolean ans = false;
-        if(x > 0){
+        if(x > 0 && !prev[y][x - 1]){
             if(grid.getComponent(x - 1, y) instanceof EndSpace){
                 return true;
             }
@@ -24,7 +24,7 @@ public class GridValidator {
                 prev[x - 1][y] = false;
             }
         }
-        if(x < grid.getWidth() - 1){
+        if(x < grid.getWidth() - 1 && !prev[y][x + 1]){
             if(grid.getComponent(x + 1, y) instanceof EndSpace){
                 return true;
             }
@@ -34,7 +34,7 @@ public class GridValidator {
                 prev[x + 1][y] = false;
             }
         }
-        if(y > 0){
+        if(y > 0 && !prev[y - 1][x]){
             if(grid.getComponent(x, y - 1) instanceof EndSpace){
                 return true;
             }
@@ -44,7 +44,7 @@ public class GridValidator {
                 prev[x][y - 1] = false;
             }
         }
-        if(y < grid.getHeight() - 1){
+        if(y < grid.getHeight() - 1 && !prev[y + 1][x]){
             if(grid.getComponent(x, y + 1) instanceof EndSpace){
                 return true;
             }
