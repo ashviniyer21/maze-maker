@@ -44,6 +44,8 @@ Moved Board
 Board Moved above border (can be dragged back down)
 ![Pan Tool](/images/pan-4.png)
 
+Furthermore, the grid can be zoomed in / out using Shift + plus or Shift + minus.
+
 To save a grid, click the `save` button, then select the path you want to save your file to. It will be saved as a `.mzmk` file, which is a required extension for loading levels to play. **Note:** Levels cannot be saved if they do not have exactly 1 start space and at least 1 end spaces
 
 Saving the Grid
@@ -62,7 +64,7 @@ Selecting File
 Loading File
 ![Pan Tool](/images/load-3.png)
 
-After loading a level, the player will spawn on the start space and can move around using the arrow keys. To interact with an object, press space. The object you interact with will be on the grid space above, below, left, or right of the player, depending which direction they are facing.
+After loading a level, the player will spawn on the start space and can move around using the arrow keys. To interact with an object, press space. The object you interact with will be on the grid space above, below, left, or right of the player, depending which direction they are facing. To zoom in or out on the level, use shift + plus / shift + minus.
 ![Pan Tool](/images/playing-level.png)
 
 Beating a level will take you to a win screen, where you can go back to either play another level or make one yourself.
@@ -108,11 +110,16 @@ Beating a level will take you to a win screen, where you can go back to either p
 - Can only be walked through if the floor state is the same as the temporary floor color
 - Orange (middle image) can only be walked through if the floor state is orange, same for blue with a blue floor state (right image)
 - If a floor cannot be walked through currently, it will appear as invisible (left image)
+
+##Controls
+- Move: Arrow Keys
+- Interact: `Space`
+- Zoom in / out: `Shift` + `+` / `Shift` + `-`
 ## Current Bugs / Future Improvements
 - UI overhaul
 - Add level completion validation
 - Add more components
 - Create a proper player sprite
 - Make Server for people to upload levels to
-- Scaling based on resolution and resizing
+- Fix Sprites when zoomed in / out
 - Please leave other suggestions for improvements!
