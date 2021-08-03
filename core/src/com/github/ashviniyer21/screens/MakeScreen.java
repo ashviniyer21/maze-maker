@@ -1,6 +1,7 @@
 package com.github.ashviniyer21.screens;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Cursor;
@@ -49,7 +50,14 @@ public class MakeScreen implements Screen {
 
     @Override
     public void render(float delta) {
-
+        if((Gdx.input.isKeyPressed(Input.Keys.SHIFT_LEFT) || Gdx.input.isKeyPressed(Input.Keys.SHIFT_RIGHT)) && Gdx.input.isKeyJustPressed(Input.Keys.EQUALS)){
+            MazeMaker.GRID_WIDTH += 1;
+            drawUI();
+        }
+        if((Gdx.input.isKeyPressed(Input.Keys.SHIFT_LEFT) || Gdx.input.isKeyPressed(Input.Keys.SHIFT_RIGHT)) && Gdx.input.isKeyJustPressed(Input.Keys.MINUS)){
+            MazeMaker.GRID_WIDTH = Math.max(1, MazeMaker.GRID_WIDTH - 1);
+            drawUI();
+        }
     }
 
     @Override
@@ -80,11 +88,14 @@ public class MakeScreen implements Screen {
     public void drawUI(){
         stage.clear();
         grid.addToMakeScreen(stage, this);
+
         Image cover = new Image(new TextureRegionDrawable(new TextureRegion(new Texture(Gdx.files.internal("cover.png")))));
-        cover.setWidth(900);
+        cover.setWidth((float) (900 * MazeMaker.SCALE));
         cover.setHeight(150);
         cover.setPosition(0, 550);
+        MazeMaker.scaleLocation(cover);
         stage.addActor(cover);
+
         TextButton menuButton = new TextButton("Go Back", MazeMaker.skin);
         menuButton.setPosition(50, 600);
         menuButton.addListener(new ChangeListener() {
@@ -93,15 +104,19 @@ public class MakeScreen implements Screen {
                 mazeMaker.setScreen(new MenuScreen(stage, mazeMaker));
             }
         });
+        MazeMaker.scaleLocation(menuButton);
         stage.addActor(menuButton);
+
         final TextField widthInput = new TextField("w", MazeMaker.skin);
         widthInput.setPosition(75, 650);
         widthInput.setWidth(30);
+        MazeMaker.scaleLocation(widthInput);
         stage.addActor(widthInput);
 
         final TextField heightInput = new TextField("h", MazeMaker.skin);
         heightInput.setPosition(125, 650);
         heightInput.setWidth(30);
+        MazeMaker.scaleLocation(heightInput);
         stage.addActor(heightInput);
 
         TextButton resizeGrid = new TextButton("Resize", MazeMaker.skin);
@@ -119,6 +134,7 @@ public class MakeScreen implements Screen {
                 }
             }
         });
+        MazeMaker.scaleLocation(resizeGrid);
         stage.addActor(resizeGrid);
 
         ImageButton floorButton = makeButton("floor.png", 250, 615, new Floor(0, 0));
@@ -206,8 +222,8 @@ public class MakeScreen implements Screen {
                 }
             }
         });
+        MazeMaker.scaleLocation(saveGrid);
         stage.addActor(saveGrid);
-        MazeMaker.scaleStage(stage);
     }
 
     public GridComponent getSelectedComponent(){
@@ -222,7 +238,7 @@ public class MakeScreen implements Screen {
         return pan;
     }
 
-    private ImageButton makeButton(final String path, int x, int y, final GridComponent component){
+    private ImageButton  makeButton(final String path, int x, int y, final GridComponent component){
         return makeButton(path, x, y, component, false);
     }
 
@@ -243,6 +259,8 @@ public class MakeScreen implements Screen {
                 pixmap.dispose();
             }
         });
+        MazeMaker.scaleLocation(button);
+        MazeMaker.resizeImage(button.getImage());
         return button;
     }
 }

@@ -21,6 +21,7 @@ public class WinScreen implements Screen {
         stage.clear();
         TextButton winner = new TextButton("Winner", MazeMaker.skin);
         winner.setPosition(425, 325);
+        MazeMaker.scaleLocation(winner);
         stage.addActor(winner);
 
         TextButton menuButton = new TextButton("Go Back", MazeMaker.skin);
@@ -31,8 +32,8 @@ public class WinScreen implements Screen {
                 mazeMaker.setScreen(new MenuScreen(stage, mazeMaker));
             }
         });
+        MazeMaker.scaleLocation(menuButton);
         stage.addActor(menuButton);
-        MazeMaker.scaleStage(stage);
     }
 
     @Override

@@ -101,6 +101,7 @@ public class Grid {
         image.setWidth(MazeMaker.GRID_WIDTH);
         image.setHeight(MazeMaker.GRID_WIDTH);
         image.setPosition((MazeMaker.GRID_WIDTH)*(component.getX()+1) + offset[0], (MazeMaker.GRID_WIDTH)*(component.getY()+1) + offset[1]);
+        MazeMaker.resizeImage(image);
         return image;
     }
 
@@ -138,6 +139,7 @@ public class Grid {
                 return true;
             }
         });
+        MazeMaker.resizeImage(image.getImage());
         return image;
     }
 

@@ -44,10 +44,13 @@ public class PlayScreen implements Screen {
                 mazeMaker.setScreen(new MenuScreen(stage, mazeMaker));
             }
         });
+        MazeMaker.scaleLocation(menuButton);
         stage.addActor(menuButton);
+
         if(grid != null){
             grid.addToPlayScreen(stage);
         }
+
         TextButton selectButton = new TextButton("Select", MazeMaker.skin);
         selectButton.setPosition(550, 650);
         selectButton.addListener(new ChangeListener() {
@@ -78,6 +81,8 @@ public class PlayScreen implements Screen {
 
             }
         });
+        MazeMaker.scaleLocation(selectButton);
+
         TextButton loadButton = new TextButton("Load", MazeMaker.skin);
         loadButton.setPosition(625, 650);
         loadButton.addListener(new ChangeListener() {
@@ -89,9 +94,10 @@ public class PlayScreen implements Screen {
                 drawUI();
             }
         });
+        MazeMaker.scaleLocation(loadButton);
+
         stage.addActor(selectButton);
         stage.addActor(loadButton);
-        MazeMaker.scaleStage(stage);
     }
 
     @Override

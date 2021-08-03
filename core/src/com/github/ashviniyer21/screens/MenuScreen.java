@@ -45,9 +45,11 @@ public class MenuScreen implements Screen {
             }
         });
 
+        MazeMaker.scaleLocation(setMakeScreenButton);
+        MazeMaker.scaleLocation(setPlayScreenButton);
+
         stage.addActor(setMakeScreenButton);
         stage.addActor(setPlayScreenButton);
-        MazeMaker.scaleStage(stage);
     }
 
     @Override

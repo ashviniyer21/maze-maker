@@ -2,6 +2,7 @@
 .idea/
 /core/build/
 /desktop/build/
+MANIFEST.MF
 
 ## Gradle
 .gradle/
