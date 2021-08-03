@@ -102,6 +102,14 @@ public class PlayScreen implements Screen {
 
     @Override
     public void render(float delta) {
+        if((Gdx.input.isKeyPressed(Input.Keys.SHIFT_LEFT) || Gdx.input.isKeyPressed(Input.Keys.SHIFT_RIGHT)) && Gdx.input.isKeyJustPressed(Input.Keys.EQUALS)){
+            MazeMaker.GRID_WIDTH += 1;
+            drawUI();
+        }
+        if((Gdx.input.isKeyPressed(Input.Keys.SHIFT_LEFT) || Gdx.input.isKeyPressed(Input.Keys.SHIFT_RIGHT)) && Gdx.input.isKeyJustPressed(Input.Keys.MINUS)){
+            MazeMaker.GRID_WIDTH = Math.max(1, MazeMaker.GRID_WIDTH - 1);
+            drawUI();
+        }
         if(grid != null && grid.getPlayer() != null){
             if(Gdx.input.isKeyJustPressed(Input.Keys.LEFT)){
                 direction = 'E';
