@@ -111,7 +111,7 @@ Beating a level will take you to a win screen, where you can go back to either p
 - Orange (middle image) can only be walked through if the floor state is orange, same for blue with a blue floor state (right image)
 - If a floor cannot be walked through currently, it will appear as invisible (left image)
 
-##Controls
+## Controls
 - Move: Arrow Keys
 - Interact: `Space`
 - Zoom in / out: `Shift` + `+` / `Shift` + `-`
