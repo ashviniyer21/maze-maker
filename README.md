@@ -1,6 +1,15 @@
 # Maze Maker
 Maze Maker is a game made using LibGDX and Java that allows users to create levels and play through other people's levels. Each level has a start and end point, and the player must solve their way through each level to complete the level. [Newest Release](https://github.com/ashviniyer21/maze-maker/releases)
 
+## Current Bugs / Future Improvements
+- UI overhaul
+- Add level completion validation
+- Add more components
+- Create a proper player sprite
+- Make Server for people to upload levels to
+- Fix Sprites when zoomed in / out
+- Please leave other suggestions for improvements!
+
 ## How to Play
 A player will start on a start space, and their goal is to interact with an end space to complete the level, having to traverse through various puzzles created by other players.
 ### Making Levels
@@ -115,11 +124,3 @@ Beating a level will take you to a win screen, where you can go back to either p
 - Move: Arrow Keys
 - Interact: `Space`
 - Zoom in / out: `Shift` + `+` / `Shift` + `-`
-## Current Bugs / Future Improvements
-- UI overhaul
-- Add level completion validation
-- Add more components
-- Create a proper player sprite
-- Make Server for people to upload levels to
-- Fix Sprites when zoomed in / out
-- Please leave other suggestions for improvements!
