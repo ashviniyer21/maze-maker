@@ -3,6 +3,7 @@ package com.github.ashviniyer21;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
@@ -52,6 +53,7 @@ public class MazeMaker extends Game implements ApplicationListener {
 		Dialog dialog = new Dialog("Error", skin, "dialog");
 		dialog.text(error);
 		dialog.button("Close", false);
+		dialog.key(Input.Keys.ENTER, false);
 		dialog.show(stage);
 	}
 }
