@@ -11,8 +11,8 @@ public class DesktopLauncher {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
 		Dimension size = Toolkit.getDefaultToolkit().getScreenSize();
 
-		int width = (int)size.getWidth() - 100;
-		int height = (int)size.getHeight() - 100;
+		int width = (int)size.getWidth() - 200;
+		int height = (int)size.getHeight() - 200;
 		MazeMaker.SCALE = Math.min((double) width / 900, (double) height / 700);
 		config.width = (int) (900 * MazeMaker.SCALE);
 		config.height = (int) (700 * MazeMaker.SCALE);

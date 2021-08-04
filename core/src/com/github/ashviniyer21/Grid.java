@@ -98,8 +98,6 @@ public class Grid {
 
     private Image makeImage(final GridComponent component){
         Image image = new Image(component);
-        image.setWidth(MazeMaker.GRID_WIDTH);
-        image.setHeight(MazeMaker.GRID_WIDTH);
         image.setPosition((MazeMaker.GRID_WIDTH)*(component.getX()+1) + offset[0], (MazeMaker.GRID_WIDTH)*(component.getY()+1) + offset[1]);
         MazeMaker.resizeImage(image);
         return image;
@@ -107,8 +105,6 @@ public class Grid {
 
     private ImageButton makeImageButton(final GridComponent component, final MakeScreen screen){
         final ImageButton image = new ImageButton(component.getMakeScreenTexture());
-        image.setWidth(MazeMaker.GRID_WIDTH);
-        image.setHeight(MazeMaker.GRID_WIDTH);
         image.setPosition((MazeMaker.GRID_WIDTH)*(component.getX()+1) + offset[0], (MazeMaker.GRID_WIDTH)*(component.getY()+1) + offset[1]);
         image.addListener(new InputListener(){
             @Override
