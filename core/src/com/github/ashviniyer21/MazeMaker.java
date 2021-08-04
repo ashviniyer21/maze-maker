@@ -49,11 +49,7 @@ public class MazeMaker extends Game implements ApplicationListener {
 	}
 
 	public static void createPopup(String error, Stage stage){
-		Dialog dialog = new Dialog("Error", skin, "dialog") {
-			public void result(Object obj) {
-
-			}
-		};
+		Dialog dialog = new Dialog("Error", skin, "dialog");
 		dialog.text(error);
 		dialog.button("Close", false);
 		dialog.show(stage);
