@@ -6,6 +6,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.ui.Dialog;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.utils.Array;
@@ -46,5 +47,16 @@ public class MazeMaker extends Game implements ApplicationListener {
 
 	public static void resizeImage(Image image){
 		image.setScale(((float)MazeMaker.GRID_WIDTH) / 32);
+	}
+
+	public static void createPopup(String error, Stage stage){
+		Dialog dialog = new Dialog("Error", skin, "dialog") {
+			public void result(Object obj) {
+
+			}
+		};
+		dialog.text(error);
+		dialog.button("Close", false);
+		dialog.show(stage);
 	}
 }

@@ -191,7 +191,11 @@ public class MakeScreen implements Screen {
                         }
                     }
                 }
-                if(hasStart == 1 && hasEnd){
+                if(hasStart != 1){
+                    MazeMaker.createPopup("Need exactly 1 start space", stage);
+                } else if(!hasEnd){
+                    MazeMaker.createPopup("Need at least 1 end space", stage);
+                } else {
                     new Thread(new Runnable() {
                         @Override
                         public void run() {
@@ -217,8 +221,6 @@ public class MakeScreen implements Screen {
                             f.dispose();
                         }
                     }).start();
-                } else {
-                    System.out.println("Needs Start and End Space");
                 }
             }
         });
