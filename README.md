@@ -7,7 +7,6 @@ Maze Maker is a game made using LibGDX and Java that allows users to create leve
 - Add more components
 - Create a proper player sprite
 - Make Server for people to upload levels to
-- Fix Sprites when zoomed in / out
 - Please leave other suggestions for improvements!
 
 ## Controls
